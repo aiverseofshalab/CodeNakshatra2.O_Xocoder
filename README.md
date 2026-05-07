@@ -5,7 +5,7 @@
 ![Offline](https://img.shields.io/badge/Offline-Ready-blue)
 ![Hackathon](https://img.shields.io/badge/FOSS%20Hack-2026-orange)
 
-OpenPulse is a deployable dependency-graph explorer for public GitHub repositories. Enter a repository in `owner/name` format, let the FastAPI backend fetch its `package.json`, and inspect the resulting dependency graph in a performant 3D scene built with Next.js, react-three-fiber, and Three.js.
+OpenPulse (built during Code Nakshatra 2.O) is a deployable dependency-graph explorer for public GitHub repositories. Enter a repository in `owner/name` format, let the FastAPI backend fetch its `package.json`, and inspect the resulting dependency graph in a performant 3D scene built with Next.js, react-three-fiber, and Three.js.
 
 ![download (1) (2)](https://github.com/user-attachments/assets/92154596-4f8c-44ed-bb79-8f33376f9e3a)
 
