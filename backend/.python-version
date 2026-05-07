@@ -1,6 +1,1 @@
-# API Configuration
-NEXT_PUBLIC_API_URL=http://localhost:8001
-
-# Set to 'true' to load from API on startup
-# Set to 'false' to use sample data
-NEXT_PUBLIC_USE_API=true
+3.11
