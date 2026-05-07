@@ -14,6 +14,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://open-pulse.onrender.com",
+        "https://open-pulse-omega.vercel.app"
         "https://openpulse-43sj.onrender.com",
         "http://localhost:3000",
         "http://127.0.0.1:3000",
