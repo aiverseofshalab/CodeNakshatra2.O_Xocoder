@@ -22,6 +22,13 @@ import {
   X
 } from 'lucide-react';
 
+type VulnerabilityAlert = {
+  id: string;
+  package: string;
+  severity: string;
+  description: string;
+};
+
 interface EcosystemSummary {
   ecosystem:    string;
   manifestPath: string;
