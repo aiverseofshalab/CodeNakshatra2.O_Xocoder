@@ -8,7 +8,6 @@ import RepoIntel from './RepoIntel';
 import ClientCanvasWrapper from './ClientCanvasWrapper';
 import NodeTooltip from './NodeTooltip';
 import FrontLoading from './FrontLoading';
-import RepoIntel from './RepoIntel';
 import { useRepoIntel } from '@/hooks/useRepoIntel';
 import { useGraphStore } from '@/stores/graphStore';
 
