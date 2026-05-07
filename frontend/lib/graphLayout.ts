@@ -6,8 +6,11 @@ import type {
   NodeType,
 } from '@/types/graph';
 
-const clamp = (value: number, min: number, max: number) =>
-  Math.min(max, Math.max(min, value));
+const clamp = (
+  value: number,
+  min: number,
+  max: number,
+) => Math.min(max, Math.max(min, value));
 
 function hashValue(input: string): number {
   let hash = 0;
@@ -44,14 +47,16 @@ function clusterPosition(
 
   const hash = hashValue(node.id);
 
-  const angle = ((hash % 360) * Math.PI) / 180;
+  const angle =
+    ((hash % 360) * Math.PI) / 180;
 
   const radius =
     4 +
     (hash % 7) * 0.35 +
     (index % 5) * 0.42;
 
-  const ringOffset = (cluster - 4) * 3.4;
+  const ringOffset =
+    (cluster - 4) * 3.4;
 
   const y =
     ((cluster % 3) - 1) * 3.2 +
@@ -89,23 +94,32 @@ export function normalizeAnalyzerGraph(
       id: node.id,
       label: node.id,
       type: node.type,
-      position: clusterPosition(node, index),
+
+      position: clusterPosition(
+        node,
+        index,
+      ),
 
       size: clamp(
-        typeof node.size === 'number' ? node.size : 1.5,
+        typeof node.size === 'number'
+          ? node.size
+          : 1.5,
         0.9,
         2.8,
       ),
 
       riskScore: clamp(
-        typeof node.risk === 'number' ? node.risk : 0,
+        typeof node.risk === 'number'
+          ? node.risk
+          : 0,
         0,
         1,
       ),
 
       metadata: {
         origin:
-          node.type === 'repository' || node.type === 'root'
+          node.type === 'repository' ||
+          node.type === 'root'
             ? 'repository'
             : 'dependency',
       },
@@ -123,10 +137,7 @@ export function normalizeAnalyzerGraph(
       id: `edge-${index}`,
       source: edge.source,
       target: edge.target,
-      weight:
-        typeof edge.weight === 'number'
-          ? edge.weight
-          : 1,
+      weight: 1,
     }));
 
   return {
